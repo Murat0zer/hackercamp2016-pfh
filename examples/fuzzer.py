@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 import argparse
 import sys
 import requests
