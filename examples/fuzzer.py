@@ -11,7 +11,7 @@ COLOR = {404: "red", 200: "green", 301: "blue", 302: "blue"}
 
 description = """
     This fuzzer script has been writed for hackercamp
-    Example: python fuzzer.py --url http://example.com/FUZZER --hc 404 --wordlist /home/user/wordlist.txt
+    Example: python fuzzer.py --url http://example.com/FUZZ --hc 404 --wordlist /home/user/wordlist.txt
 """
 
 parser = argparse.ArgumentParser("fuzzer", description)
@@ -34,11 +34,9 @@ def fuzzing():
         exit(0)
     url = args.url.split('FUZZ')[0]
     args.hc = args.hc.split(",")
-    print """
-====================
-Response    Request
-====================
-    """
+    print "===================="
+    print "Response    Request"
+    print "===================="
     with open(args.wordlist, "r") as f:
         for line in f.readlines():
             line = line.strip()
