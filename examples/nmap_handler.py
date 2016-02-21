@@ -2,7 +2,7 @@
 import argparse
 import sys
 import subprocess
-from xml.dom import minidom
+from .dom import minidom
 
 description = """
     nmap handler with python for hackercamp

